@@ -17,10 +17,10 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
         this.Professor = Professor;
 
-        cursos.add(this);
+        cursos.add(this); // Adiciona o curso à lista
     }
 
-    static void verificaId(int id) throws Exception {
+    static void verificaId(int id) throws Exception { // vê se um curso com um determinado id existe na lista
         for (Curso curso : cursos) {
             if (curso.id == id) {
                 return;
@@ -29,7 +29,7 @@ public class Curso {
         throw new Exception("Curso não encontrado");
     }
 
-    static Curso buscaCurso(int id) {
+    static Curso buscaCurso(int id) { // ele faz uma busca pelo nome do curso usando a id que ele foi registrado
         for (Curso curso : cursos) {
             if (curso.id == id) {
                 return curso;

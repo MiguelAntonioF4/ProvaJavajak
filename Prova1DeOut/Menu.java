@@ -76,7 +76,7 @@ public class Menu {
                         int idCurso = scanner.nextInt();
                         Curso.verificaId(idCurso); 
                         Curso curso = Curso.buscaCurso(idCurso); 
-                        int idProfessor = curso.Professor.id;
+                        int idProfessor = curso.Professor.id; // usado para informar a quantidade de alunos cada prof tem
 
                         new Aluno(id, nome, dataNascimento, cpf, curso, idProfessor); 
                     } catch (Exception e) {
@@ -89,9 +89,9 @@ public class Menu {
                         System.out.println("id: " + professor.id + "\nnome: " + professor.nome + "\ndepartamento: " + professor.departamento + "\nquantidade de alunos: " + Aluno.contarAlunosPorProfessor(professor.id));
                         System.out.print("cursos que o professor está envolvido: ");
                         for (Curso curso : professor.cursos) {
-                        System.out.print(curso.nome + " "); // Mostrando o nome de cada curso
-                    }
-                    System.out.println(); // Para quebrar linha
+                        System.out.print(curso.nome + " "); // Mostra o nome de cada curso que o prof ta cadastrado
+                        }
+                        System.out.println(); // Pa quebra linha
                     }
                     break;
                 case 5:

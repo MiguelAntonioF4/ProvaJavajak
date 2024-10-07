@@ -7,8 +7,8 @@ public class Aluno {
     String nome;
     String dataNascimento;
     String cpf;
-    Curso Curso;  // Corrigi a capitalização de 'Curso' para 'curso'
-    int idProfessor;  // Adicione essa linha
+    Curso Curso;  
+    int idProfessor;  
 
     static ArrayList<Aluno> alunos = new ArrayList<>();
 
@@ -18,15 +18,15 @@ public class Aluno {
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
         this.Curso = Curso;
-        this.idProfessor = idProfessor;  // Armazena o id do professor
+        this.idProfessor = idProfessor;  
 
-        alunos.add(this);
+        alunos.add(this); // Adiciona o alunos à lista
     }
 
-    static int contarAlunosPorProfessor(int idprofessor) {
+    static int contarAlunosPorProfessor(int idprofessor) { // O nome ja dis né? ele vai pega a quantidade de alunos cadastrados no curso que o prof cadastrado
         int cont = 0;
         for (Aluno aluno : alunos) {
-            if (aluno.idProfessor == idprofessor) {  // Use o campo correto aqui
+            if (aluno.idProfessor == idprofessor) {  
                 cont++;
             }
         }
