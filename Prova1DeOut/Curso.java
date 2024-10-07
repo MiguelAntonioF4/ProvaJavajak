@@ -20,5 +20,22 @@ public class Curso {
         cursos.add(this);
     }
 
+    static void verificaId(int id) throws Exception {
+        for (Curso curso : cursos) {
+            if (curso.id == id) {
+                return;
+            }
+        }
+        throw new Exception("Curso não encontrado");
+    }
+
+    static Curso buscaCurso(int id) {
+        for (Curso curso : cursos) {
+            if (curso.id == id) {
+                return curso;
+            }
+        }
+        return null;
+    }
 }
 
