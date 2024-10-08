@@ -22,7 +22,8 @@ public class Curso {
 
     static void verificaId(int id) throws Exception { // vê se um curso com um determinado id existe na lista
         for (Curso curso : cursos) {
-            if (curso.id == id) {
+            if (curso.id == id) { // Vê se o ID do curso atual é igual ao ID colocado
+
                 return;
             }
         }

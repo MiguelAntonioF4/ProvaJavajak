@@ -86,7 +86,7 @@ public class Menu {
                 case 4:
                     System.out.println("Listar Professores");
                     for (Professor professor : Professor.professores) {
-                        System.out.println("id: " + professor.id + "\nnome: " + professor.nome + "\ndepartamento: " + professor.departamento + "\nquantidade de alunos: " + Aluno.contarAlunosPorProfessor(professor.id));
+                        System.out.println("id: " + professor.id + "\nnome: " + professor.nome + "\ndepartamento: " + professor.departamento + "\nquantidade de alunos: " + Aluno.contarAlunosPorProfessor(professor.id) + "\ncarga horária total: " + professor.calculaCargaHorariaTotal());
                         System.out.print("cursos que o professor está envolvido: ");
                         for (Curso curso : professor.cursos) {
                         System.out.print(curso.nome + " "); // Mostra o nome de cada curso que o prof ta cadastrado

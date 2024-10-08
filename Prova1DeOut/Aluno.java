@@ -23,10 +23,10 @@ public class Aluno {
         alunos.add(this); // Adiciona o alunos à lista
     }
 
-    static int contarAlunosPorProfessor(int idprofessor) { // O nome ja dis né? ele vai pega a quantidade de alunos cadastrados no curso que o prof cadastrado
+    static int contarAlunosPorProfessor(int idprofessor) { // O nome ja dis né? ele vai pega a quantidade de alunos cadastrados para um determinado professor
         int cont = 0;
         for (Aluno aluno : alunos) {
-            if (aluno.idProfessor == idprofessor) {  
+            if (aluno.idProfessor == idprofessor) {  // Vê se o ID do professor do aluno corresponde ao ID colocado
                 cont++;
             }
         }

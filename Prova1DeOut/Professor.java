@@ -29,13 +29,22 @@ public class Professor {
     }
 
     static Professor buscaProfessor(int id) { // ele faz uma busca pelo nome do professor usando a id que ele mesmo foi registrado
-        for (Professor professor : professores) {
-            if (professor.id == id) {
+        for (Professor professor : professores) {  // passa por todos os professores cadastrados
+            if (professor.id == id) { // Vê se o ID do professor atual é igual ao ID colocado
+
                 return professor;
             }
         }
         return null;
     }
+
+    public int calculaCargaHorariaTotal() {
+        int cargaTotal = 0;// Inicia com 0
+        for (Curso curso : cursos) { // corre por todos os cursos ligados ao professor
+            cargaTotal += curso.cargaHoraria; // ele coloca a carga horária do curso na carga total
+        }
+        return cargaTotal;
+    }    
 }
 
 
